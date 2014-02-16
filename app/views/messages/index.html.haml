@@ -1,0 +1,28 @@
+
+
+#setName
+  .header What is your name?
+  .nameForm
+    %input#name{placeholder: "Your name", type: "text"}
+    %br
+    %button{:type => "button", :id => "submitName", :value => "Send"} Send name
+    
+#chat
+  .toggle_chat
+    %button{:type => "button", :id => "toggle_button"}
+      
+  .chat_box#toggle  
+    #header
+      Hello,
+      = succeed "!" do
+        %span#name_span name
+   
+    
+    %ul#messages= render @messages
+    = form_for Message.new, remote: true do |f|
+      = f.text_field :text
+      = f.hidden_field :author, value: "unknown"
+      = f.submit "Send", id: "submit_message"
+      
+      
+= subscribe_to "/messages/new"

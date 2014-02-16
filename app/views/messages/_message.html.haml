@@ -1,0 +1,8 @@
+-unless @message.nil?
+  %li
+    %table
+      %tr
+        %td#message
+          %b #{@message.author}: 
+          =@message.text
+        %td#time= @message.created_at.strftime('%H:%M:%S')
