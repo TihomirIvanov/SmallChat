@@ -1,27 +1,26 @@
 
 
-#setName
-  .header What is your name?
-  .nameForm
+#set_name
+  #header What is your name?
+  #name_form
     %input#name{placeholder: "Your name", type: "text"}
     %br
-    %button{:type => "button", :id => "submitName", :value => "Send"} Send name
+    %button#submit_name{:type => "button", :value => "Send"} Send name
     
 #chat
-  .toggle_chat
-    %button{:type => "button", :id => "toggle_button"}
+  #toggle_chat
+    %button#toggle_button{:type => "button"}
       
-  .chat_box#toggle  
+  #chat_box.toggle  
     #header
       Hello,
       = succeed "!" do
         %span#name_span name
    
-    
     %ul#messages= render @messages
     = form_for Message.new, remote: true do |f|
       = f.text_field :text
-      = f.hidden_field :author, value: "unknown"
+      = f.hidden_field :author
       = f.submit "Send", id: "submit_message"
       
       

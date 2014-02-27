@@ -1,7 +1,9 @@
 <% publish_to "/messages/new" do %>
-  var m = $("#messages");
-  
-  m.append("<%= j render(@message) %>");
-  m.scrollTop(m.last().position().top + m.last().height());
-  $("#new_message")[0].reset();
+  var m = $( "#messages" );
+  var scrollPosition = m.last().position().top + m.last().height();
+
+  m.append( "<%= j render(@message) %>" );
+  m.scrollTop( scrollPosition );
+
+  $( "#new_message" )[0].reset();
 <% end %>

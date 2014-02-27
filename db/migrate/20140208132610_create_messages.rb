@@ -2,7 +2,7 @@ class CreateMessages < ActiveRecord::Migration
   def change
     create_table :messages do |t|
       t.string :text
-      t.string :author
+      t.string :author, default: 'unknown'
 
       t.timestamps
     end

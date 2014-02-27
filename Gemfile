@@ -44,13 +44,21 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Use HAML syntax for views
 gem 'haml'
+
+# Sets Rails generators to create HAML views
 gem 'haml-rails'
-gem 'jquery-rails'
+
+# Use Private pub to publish and subscribe trough Faye
 gem 'private_pub'
+
+# Use Thin server for Faye
 gem 'thin'
 
+# Use RSpec and Capybara for testing
 gem 'rspec-rails'
 gem 'capybara'
-gem 'launchy'
+
+# Use selenium for testing java script
 gem 'selenium-webdriver'

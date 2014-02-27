@@ -13,11 +13,11 @@
 
 ActiveRecord::Schema.define(version: 20140208132610) do
 
-  create_table "messages", force: true do |t|
-    t.string   "text"
-    t.string   "author"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table 'messages', force: true do |t|
+    t.string   'text'
+    t.string   'author',     default: 'unknown'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
 
 end

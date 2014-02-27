@@ -2,7 +2,118 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#setName
+@mixin text-wrapping
+  white-space: -moz-pre-wrap !important  /* Mozilla, since 1999 */
+  white-space: -pre-wrap      /* Opera 4-6 */
+  white-space: -o-pre-wrap   /* Opera 7 */
+  white-space: pre-wrap      /* css-3 */
+  word-wrap: break-word      /* Internet Explorer 5.5+ */
+  word-break: break-all
+  white-space: normal
+  
+@mixin submit-form-tradeo
+  #name
+    background-color: rgb(255, 255, 255)
+    background-image: linear-gradient(rgb(240, 240, 240), rgb(255, 255, 255))
+    border-bottom-color: rgb(90, 118, 182)
+    border-bottom-left-radius: 4px
+    border-bottom-right-radius: 4px
+    border-bottom-style: solid
+    border-bottom-width: 1px
+    border-image-outset: 0px
+    border-image-repeat: stretch
+    border-image-slice: 100%
+    border-image-source: none
+    border-image-width: 1
+    border-left-color: rgb(90, 118, 182)
+    border-left-style: solid
+    border-left-width: 1px
+    border-right-color: rgb(90, 118, 182)
+    border-right-style: solid
+    border-right-width: 1px
+    border-top-color: rgb(90, 118, 182)
+    border-top-left-radius: 4px
+    border-top-right-radius: 4px
+    border-top-style: solid
+    border-top-width: 1px
+    box-shadow: rgb(90, 118, 182) 0px 0px 5px 0px
+    color: rgb(68, 68, 68)
+    cursor: auto
+    display: inline-block
+    font-family: 'Open Sans', sans-serif
+    font-size: 13px
+    font-style: normal
+    font-variant: normal
+    font-weight: normal
+    height: 30px
+    letter-spacing: normal
+    line-height: 18px
+    margin: 20px 0px 0px 0px
+    outline-color: rgb(68, 68, 68)
+    outline-offset: 0px
+    outline-style: none
+    outline-width: 0px
+    padding: 0px
+    text-align: start
+    text-indent: 5px
+    text-shadow: rgb(255, 255, 255) 0px 1px 1px
+    text-transform: none
+    vertical-align: baseline
+    width: 285px
+  #submit_name
+    background-attachment: scroll
+    background-clip: border-box
+    background-color: rgba(0, 0, 0, 0)
+    background-image: url('https://d1nrosdlfy3br.cloudfront.net/assets/front-page/front-page-icons-s67fc88a458-a841545faf0d6498a5cece89930c0f0e.png')
+    background-origin: padding-box
+    background-position: 0px -680px
+    background-size: auto
+    border-bottom-color: rgb(255, 255, 255)
+    border-bottom-style: none
+    border-bottom-width: 0px
+    border-image-outset: 0px
+    border-image-repeat: stretch
+    border-image-slice: 100%
+    border-image-source: none
+    border-image-width: 1
+    border-left-color: rgb(255, 255, 255)
+    border-left-style: none
+    border-left-width: 0px
+    border-right-color: rgb(255, 255, 255)
+    border-right-style: none
+    border-right-width: 0px
+    border-top-color: rgb(255, 255, 255)
+    border-top-style: none
+    border-top-width: 0px
+    box-sizing: border-box
+    color: rgb(255, 255, 255)
+    cursor: pointer
+    display: inline-block
+    font-family: 'Open Sans', sans-serif
+    font-size: 16px
+    font-style: normal
+    font-variant: normal
+    font-weight: 600
+    height: 70px
+    letter-spacing: normal
+    line-height: 16px
+    margin-bottom: 0px
+    margin-left: auto
+    margin-right: auto
+    margin-top: 22px
+    outline-color: rgb(255, 255, 255)
+    outline-style: none
+    outline-width: 0px
+    padding-bottom: 14px
+    padding-left: 13px
+    padding-right: 0px
+    padding-top: 0px
+    text-align: center
+    text-indent: 0px
+    text-shadow: rgb(68, 34, 102) 0px 1px 
+    width: 291px
+
+#set_name
   display: none
   position: fixed
   top: 50%
@@ -15,7 +126,7 @@
   border-radius: 5px
   border: 1px solid #b2cce8
   box-shadow: inset 19px 0 17px -17px #a5adb5
-  .header
+  #header
     background: url('https://d1nrosdlfy3br.cloudfront.net/assets/front-page/front-page-icons-s67fc88a458-a841545faf0d6498a5cece89930c0f0e.png') no-repeat
     background-position: -706px -304px
     height: 51px
@@ -33,125 +144,20 @@
     
     color: rgb(255, 255, 255)
   
-  .nameForm
+  #name_form
+    @include submit-form-tradeo
     text-align: center
-    input
-      background-color: rgb(255, 255, 255)
-      background-image: linear-gradient(rgb(240, 240, 240), rgb(255, 255, 255))
-      border-bottom-color: rgb(90, 118, 182)
-      border-bottom-left-radius: 4px
-      border-bottom-right-radius: 4px
-      border-bottom-style: solid
-      border-bottom-width: 1px
-      border-image-outset: 0px
-      border-image-repeat: stretch
-      border-image-slice: 100%
-      border-image-source: none
-      border-image-width: 1
-      border-left-color: rgb(90, 118, 182)
-      border-left-style: solid
-      border-left-width: 1px
-      border-right-color: rgb(90, 118, 182)
-      border-right-style: solid
-      border-right-width: 1px
-      border-top-color: rgb(90, 118, 182)
-      border-top-left-radius: 4px
-      border-top-right-radius: 4px
-      border-top-style: solid
-      border-top-width: 1px
-      box-shadow: rgb(90, 118, 182) 0px 0px 5px 0px
-      color: rgb(68, 68, 68)
-      cursor: auto
-      display: inline-block
-      font-family: 'Open Sans', sans-serif
-      font-size: 13px
-      font-style: normal
-      font-variant: normal
-      font-weight: normal
-      height: 30px
-      letter-spacing: normal
-      line-height: 18px
-      margin-bottom: 0px
-      margin-left: 0px
-      margin-right: 0px
-      margin-top: 20px
-      outline-color: rgb(68, 68, 68)
-      outline-offset: 0px
-      outline-style: none
-      outline-width: 0px
-      padding-bottom: 0px
-      padding-left: 0px
-      padding-right: 0px
-      padding-top: 0px
-      text-align: start
-      text-indent: 5px
-      text-shadow: rgb(255, 255, 255) 0px 1px 1px
-      text-transform: none
-      vertical-align: baseline
-      width: 285px
-    button
-      background-attachment: scroll
-      background-clip: border-box
-      background-color: rgba(0, 0, 0, 0)
-      background-image: url('https://d1nrosdlfy3br.cloudfront.net/assets/front-page/front-page-icons-s67fc88a458-a841545faf0d6498a5cece89930c0f0e.png')
-      background-origin: padding-box
-      background-position: 0px -680px
-      background-size: auto
-      border-bottom-color: rgb(255, 255, 255)
-      border-bottom-style: none
-      border-bottom-width: 0px
-      border-image-outset: 0px
-      border-image-repeat: stretch
-      border-image-slice: 100%
-      border-image-source: none
-      border-image-width: 1
-      border-left-color: rgb(255, 255, 255)
-      border-left-style: none
-      border-left-width: 0px
-      border-right-color: rgb(255, 255, 255)
-      border-right-style: none
-      border-right-width: 0px
-      border-top-color: rgb(255, 255, 255)
-      border-top-style: none
-      border-top-width: 0px
-      box-sizing: border-box
-      color: rgb(255, 255, 255)
-      cursor: pointer
-      display: inline-block
-      font-family: 'Open Sans', sans-serif
-      font-size: 16px
-      font-style: normal
-      font-variant: normal
-      font-weight: 600
-      height: 70px
-      letter-spacing: normal
-      line-height: 16px
-      margin-bottom: 0px
-      margin-left: auto
-      margin-right: auto
-      margin-top: 22px
-      outline-color: rgb(255, 255, 255)
-      outline-style: none
-      outline-width: 0px
-      padding-bottom: 14px
-      padding-left: 13px
-      padding-right: 0px
-      padding-top: 0px
-      text-align: center
-      text-indent: 0px
-      text-shadow: rgb(68, 34, 102) 0px 1px 
-      width: 291px
+    
 #chat
   height: 70%
   position: fixed
   top: 15%
   right: 0
   
-  .toggle_chat
+  #toggle_chat
     height: 100%
     float: left
     visibility: hidden
-  
     #toggle_button
       position: relative
       top: 50%
@@ -164,16 +170,13 @@
       border-radius: 6px
       box-shadow: #75599e 0 1px 0 inset,#75599e 0 1px 0
            
-  .chat_box
+  #chat_box
     height: 100%
     float: left
     width: 250px
     border: 1px solid #47267b
-    //border-top-left-radius: 5px
     border-bottom-left-radius: 5px 
     display: none
-
-          
     #header
       margin: -10px 0 0 0
       font-family: 'Open Sans', sans-serif
@@ -181,7 +184,6 @@
       line-height: 26px
       text-shadow: 0 -1px #22142f
       color: #fff
-      
       height: 28px
       width: 100%
       display: block
@@ -189,8 +191,6 @@
       background-position: -435px -113px
       text-align: center
       padding-right: 5px
-      
-      
     #messages
       overflow:scroll
       position: absolute
@@ -207,16 +207,8 @@
         table
           width: 100%
           #message
+            @include text-wrapping
             text-align: left
-            
-            white-space: -moz-pre-wrap !important  /* Mozilla, since 1999 */
-            white-space: -pre-wrap      /* Opera 4-6 */
-            white-space: -o-pre-wrap   /* Opera 7 */
-            white-space: pre-wrap      /* css-3 */
-            word-wrap: break-word      /* Internet Explorer 5.5+ */
-            word-break: break-all
-            white-space: normal
-            
           #time 
             width: 70px
             text-align: right
