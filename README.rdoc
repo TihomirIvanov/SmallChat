@@ -1,6 +1,3 @@
 == README
 
 * I am using the Private Pub gem (https://github.com/ryanb/private_pub) to publish and subscribe for messages through Faye.
-
-* To start Faye you need to run:
-  <tt>rackup private_pub.ru -s thin -E production</tt>
